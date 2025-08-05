@@ -55,6 +55,7 @@ for CHR in {6..32}; do
 
 			echo "Extracting region $REGION -> $OUTFILE"
 			bcftools view -r "$REGION" "$VCF" -Oz -o ${OUTFILE}
+			tabix -p vcf ${OUTFILE}
 		done
 	done
 done
