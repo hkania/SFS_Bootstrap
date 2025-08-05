@@ -13,6 +13,7 @@
 #chromosome length.
 
 #To generalize, you will need to change the input file paths carefully.
+#The script took about 2 hours and 40 minutes for ~26 chromosomes!
 
 #Move to correct folder
 cd /work/hpk4/sfs_boot
