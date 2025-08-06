@@ -1,1 +1,16 @@
 # SFS_Bootstrap
+
+### This repository holds the scripts used to generate the bootstrap replicates for the fastsimcoal2 Microcebus run.
+
+### Steps:
+1. Run [20kb_extract_loop_fin.sh](https://github.com/hkania/SFS_Bootstrap/blob/main/scripts/20kb_extract_loop_fin.sh).
+  * This script takes all 32 chromosome VCF files and chunks them into VCF files representing sites within 20kb windows based on each chromosome's length.
+  > The 20kb size was chosen based on LD calculated from the data.
+2. Run [bootstrap_vcf_scav.sh](https://github.com/hkania/SFS_Bootstrap/blob/main/scripts/bootstrap_vcf_scav.sh) for each chromosome.
+  * This script will resample, with replacement, from the 20kb VCF files for that chromosome to equal the same number of files and generate a concatenated VCF file with those sites. As such, some sites may be present multiple times. This will make each bootstrap VCF replicate, 50 per each chromosome.
+2. Run
+  * This script will take each bootstrap VCF replicate and generate an SFS file.
+3. Run
+  * This script will take each of the 50 replicate SFS files per chromosome and join the to the corresponding replicates of all the chromosomes. You will then have 50 SFS files representing different bootstrap VCF replicates across the entire M. murinus genome.
+4. Run
+  * This script will take each of the 50 merged SFS files and run fastimcoal2 with the parameters denoted by the best-fit model with 100 repititions.
