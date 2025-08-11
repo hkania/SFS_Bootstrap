@@ -14,7 +14,7 @@ OUTDIR=/work/hpk4/sfs_boot/outputs
 module load R/4.4.3
 
 #Run R script
-for bootstrap in $(seq -w 1 10); do
+for bootstrap in $(seq -w 1 50); do
 	echo "Processing bootstrap ${bootstrap} SFS files"
 	#Make Bootstrap Directory with soft links to each SFS file
 	TEMP=${OUTDIR}/SFS_merge/bs${bootstrap}
