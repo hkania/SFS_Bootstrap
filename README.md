@@ -14,6 +14,10 @@
   * This script will take each of the 50 replicate SFS files per chromosome and join the to the corresponding replicates of all the chromosomes. You will then have 50 SFS files representing different bootstrap VCF replicates across the entire M. murinus genome.
     > Note: Dependent script [mergeSFS_4th.r](https:/mergeSFS_4th.r/github.com/hkania/SFS_Bootstrap/blob/main/scripts/mergeSFS_4th.r) is the R script which performs the merge of the tables
 4. Run [fastsimcoal_array_loop.sh](https://github.com/hkania/SFS_Bootstrap/blob/main/scripts/fastsimcoal_array_loop.sh)
-  * This script will take each of the 50 merged SFS files and run fastimcoal2 with the parameters denoted by the best-fit model with 100 repititions.
-5. Run
+  * This script will take each of the 50 merged SFS files and run fastimcoal2 with the parameters denoted by the best-fit model with 100 repititions. Takes between 30 and 50 hours to complete per bootstrap rep.
+5. Run [best_run_loop.sh](https://github.com/hkania/SFS_Bootstrap/blob/main/scripts/best_run_loop.sh)
   * This script will run through each bootstrap replicate SFS folder and mine each of the 100 fastsimcoal2 runs for their best liklihood parameter values. It will then decide which of the 100 runs produced the best liklihood parameters and print those parameter values to a file which can be used for determining confidence intervals of the original parameters from fastsimcoal2 run on the orignial data.
+
+### Complimentary Scripts:
+* [duration.sh](https://github.com/hkania/SFS_Bootstrap/blob/main/scripts/duration.sh)
+  * This script will print the total time elapsed for an array job. This was used to determine the total run time for the fastsimcoal2 arrays, which take between 30 and 50 hours for 100 runs to complete. The duration varies based on the number of parallel arrays being run.
