@@ -184,4 +184,4 @@ tdiv / (ngris + nmur) / (mig1 + mig2) / (Tprop + Tiso) +
   theme(plot.title = element_text(size = 10))
 ```
 
-![](Fastsimcoal_bootstrapping_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](Fastsimcoal_bootstrapping_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
