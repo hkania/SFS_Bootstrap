@@ -17,6 +17,8 @@
   * This script will take each of the 50 merged SFS files and run fastimcoal2 with the parameters denoted by the best-fit model with 100 repititions. Takes between 30 and 50 hours to complete per bootstrap rep.
 5. Run [best_run_loop.sh](https://github.com/hkania/SFS_Bootstrap/blob/main/scripts/best_run_loop.sh)
   * This script will run through each bootstrap replicate SFS folder and mine each of the 100 fastsimcoal2 runs for their best liklihood parameter values. It will then decide which of the 100 runs produced the best liklihood parameters and print those parameter values to a file which can be used for determining confidence intervals of the original parameters from fastsimcoal2 run on the orignial data.
+6. Run [Fastimcoal_bootstrapping.md](https://github.com/hkania/SFS_Bootstrap/blob/main/docs/Fastimcoal_bootstrapping.md)
+  * This script will take the 50 final parameter values that come from the maximum likelihood runs of each of the 50 bootstrap replicates and calculate the density plots and confidence intervals.
 
 ### Complimentary Scripts:
 * [duration.sh](https://github.com/hkania/SFS_Bootstrap/blob/main/scripts/duration.sh)
