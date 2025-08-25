@@ -114,6 +114,68 @@ quant_maxobslik
     ##         5%        50%        95% 
     ## -160926077 -160620958 -160350584
 
+Calculate the means
+
+``` r
+mean(bootstrap_rep_params$Ngris)
+```
+
+    ## [1] 112235.6
+
+``` r
+mean(bootstrap_rep_params$Nmur)
+```
+
+    ## [1] 137113.5
+
+``` r
+mean(bootstrap_rep_params$NANC)
+```
+
+    ## [1] 134231.3
+
+``` r
+mean(bootstrap_rep_params$Tdiv)
+```
+
+    ## [1] 102103.2
+
+``` r
+mean(bootstrap_rep_params$MIG1)
+```
+
+    ## [1] 0.0002653217
+
+``` r
+mean(bootstrap_rep_params$MIG2)
+```
+
+    ## [1] 0.0002157598
+
+``` r
+mean(bootstrap_rep_params$TPROP)
+```
+
+    ## [1] 0.01899362
+
+``` r
+mean(bootstrap_rep_params$Tiso)
+```
+
+    ## [1] 1937.9
+
+``` r
+mean(bootstrap_rep_params$MaxEstLhood)
+```
+
+    ## [1] -167231976
+
+``` r
+mean(bootstrap_rep_params$MaxObsLhood)
+```
+
+    ## [1] -160610410
+
 Finally, print the density plots!
 
 ``` r
@@ -122,4 +184,4 @@ tdiv / (ngris + nmur) / (mig1 + mig2) / (Tprop + Tiso) +
   theme(plot.title = element_text(size = 10))
 ```
 
-![](Fastsimcoal_bootstrapping_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](Fastsimcoal_bootstrapping_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
